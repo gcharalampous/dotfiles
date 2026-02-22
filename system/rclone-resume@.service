@@ -1,0 +1,11 @@
+[Unit]
+Description=Restart rclone mount after resume for %i
+After=suspend.target hibernate.target hybrid-sleep.target
+
+[Service]
+Type=oneshot
+User=georgios
+ExecStart=systemctl --user restart "rclone@%i.service"
+
+[Install]
+WantedBy=suspend.target hibernate.target hybrid-sleep.target
