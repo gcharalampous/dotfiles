@@ -35,3 +35,9 @@ fi
 # TOOLS (DNF)
 # =============================================================================
 sudo dnf install -y fzf bat lsd btop tldr
+
+# =============================================================================
+# SYSTEMD (SYSTEM)
+# =============================================================================
+sudo cp "$(chezmoi source-path)/system/rclone-resume@.service" /etc/systemd/system/
+sudo systemctl daemon-reload
