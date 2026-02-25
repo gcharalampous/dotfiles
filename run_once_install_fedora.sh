@@ -34,10 +34,10 @@ fi
 # =============================================================================
 # TOOLS (DNF)
 # =============================================================================
-sudo dnf install -y fzf bat lsd btop tldr
+sudo dnf install -y fzf bat lsd btop tldr tmux rclone chezmoi vim
 
 # =============================================================================
 # SYSTEMD (SYSTEM)
 # =============================================================================
-sudo cp "$(chezmoi source-path)/system/rclone-resume@.service" /etc/systemd/system/
+sudo cp "$HOME/.local/share/chezmoi/system/rclone-resume@.service" /etc/systemd/system/
 sudo systemctl daemon-reload
