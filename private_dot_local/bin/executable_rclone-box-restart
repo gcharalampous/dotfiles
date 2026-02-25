@@ -1,0 +1,7 @@
+#!/bin/bash
+
+systemctl --user stop rclone@Box.com.service
+sleep 2
+fusermount3 -uq ~/Box.com
+sleep 3
+systemctl --user restart rclone@Box.com.service
