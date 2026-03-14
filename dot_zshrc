@@ -30,6 +30,7 @@ alias ls='lsd'
 alias ll='lsd -lah'
 alias lt='lsd --tree'
 alias cat='bat'
+alias gitmeep='cd $HOME/Documents/GitHub/meep-py-scripts'
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
